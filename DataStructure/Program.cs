@@ -10,7 +10,7 @@
             while (flag)
             {
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Add In Reverse Order " +
-                    "\n4.Add At Particular Position \n5.Remove First Node \n6.Exit");
+                    "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -37,14 +37,15 @@
                     case 5:
                         list.RemoveFirstNode();
                         break;
+                    case 6:
+                        list.RemoveLastNode();
+                        break;
                     default:
                         flag = false;
                         break;
                 }
 
             }
-
-
         }
     }
 }
