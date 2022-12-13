@@ -88,5 +88,18 @@ namespace DataStructure
             prev.next = newestNode;
             return this.head;
         }
+
+        //REMOVE FIRST NODE
+        public void RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            this.head = this.head.next;
+            Console.WriteLine("First element is deleted successfully");
+        }
+
+
     }
 }
