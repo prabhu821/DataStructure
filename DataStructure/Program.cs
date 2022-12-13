@@ -9,7 +9,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Exit");
+                Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Add In Reverse Order \n4.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -22,6 +22,12 @@
                         list.Display();
                         break;
                     case 3:
+                        list.AddInReverseOrder(70);
+                        list.AddInReverseOrder(30);
+                        list.AddInReverseOrder(56);
+                        Console.WriteLine("Added in Reverse Order");
+                        break;
+                    default:
                         flag = false;
                         break;
                 }
