@@ -6,13 +6,14 @@
         {
             LinkedList list = new LinkedList();
             LinkedListStack stack = new LinkedListStack();
+            LinkedListQueue queue = new LinkedListQueue();
             Console.WriteLine("Welcome to the Linked List Operations");
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Add In Reverse Order " +
                     "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Search " +
-                    "\n8.Create Stack \n9.Display Stack \n10.Peek \n11.Pop \n12.Exit");
+                    "\n8.Create Stack \n9.Display Stack \n10.Peek \n11.Pop \n12.Create Queue \n13.Display Queue \n14.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -62,11 +63,18 @@
                     case 11:
                         stack.Pop();
                         break;
+                    case 12:
+                        queue.Enqueue(56);
+                        queue.Enqueue(30);
+                        queue.Enqueue(70);
+                        break;
+                    case 13:
+                        queue.Display();
+                        break;
                     default:
                         flag = false;
                         break;
                 }
-
             }
         }
     }
