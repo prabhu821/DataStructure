@@ -5,12 +5,14 @@
         static void Main(string[] args)
         {
             LinkedList list = new LinkedList();
+            LinkedListStack stack = new LinkedListStack();
             Console.WriteLine("Welcome to the Linked List Operations");
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Add In Reverse Order " +
-                    "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Search \n8.Exit");
+                    "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Search " +
+                    "\n8.Create Stack \n9.Display Stack \n10.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -45,6 +47,14 @@
                         int option = Convert.ToInt32(Console.ReadLine());
                         int find = list.Search(option);
                         Console.WriteLine("The Position of Node in LinkedList is " + find);
+                        break;
+                    case 8:
+                        stack.Push(70);
+                        stack.Push(30);
+                        stack.Push(56);
+                        break;
+                    case 9:
+                        stack.Display();
                         break;
                     default:
                         flag = false;
