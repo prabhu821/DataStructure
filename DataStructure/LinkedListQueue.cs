@@ -29,6 +29,20 @@ namespace DataStructure
             Console.WriteLine("{0} is inserted into Queue", node.data);
         }
 
+        //DEQUEUE
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is Empty.So Deletion is not Possible");
+                return;
+            }
+            else
+            {
+                this.head = this.head.next;
+            }
+        }
+
         //DISPLAY
         public void Display()
         {
