@@ -13,7 +13,8 @@
             {
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Add In Reverse Order " +
                     "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Search \n8.Size of Linked List " +
-                    "\n9.Insert at Particular Position \n11.Create Stack \n12.Display Stack \n13.Peek \n14.Pop \n15.Create Queue \n16.Display Queue \n17.Dequeue \n18.Exit");
+                    "\n9.Insert at Particular Position \n10.Delete Node At Particular Position \n11.Create Stack \n12.Display Stack " +
+                    "\n13.Peek \n14.Pop \n15.Create Queue \n16.Display Queue \n17.Dequeue \n18.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -59,6 +60,11 @@
                         Console.WriteLine("Enter the value to Insert");
                         int value = Convert.ToInt32(Console.ReadLine());
                         list.InsertAtParticuarPosition(position + 1, value);
+                        break;
+                    case 10:
+                        Console.WriteLine("Enter the Position present in List to Delete");
+                        int delete = Convert.ToInt32(Console.ReadLine());
+                        list.DeleteNodeAtParticularPosition(list.Search(delete));
                         break;
                     case 11:
                         stack.Push(70);
