@@ -12,8 +12,8 @@
             while (flag)
             {
                 Console.WriteLine("\nSelect the operation to perform \n1.Create Linked List \n2.Display \n3.Add In Reverse Order " +
-                    "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Search " +
-                    "\n8.Create Stack \n9.Display Stack \n10.Peek \n11.Pop \n12.Create Queue \n13.Display Queue \n14.Dequeue \n15.Exit");
+                    "\n4.Add At Particular Position \n5.Remove First Node \n6.Remove Last Node \n7.Search \n8.Size of Linked List" +
+                    "\n11.Create Stack \n12.Display Stack \n13.Peek \n14.Pop \n15.Create Queue \n16.Display Queue \n17.Dequeue \n18.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -50,28 +50,31 @@
                         Console.WriteLine("The Position of Node in LinkedList is " + find);
                         break;
                     case 8:
+                        list.Size();
+                        break;
+                    case 11:
                         stack.Push(70);
                         stack.Push(30);
                         stack.Push(56);
                         break;
-                    case 9:
+                    case 12:
                         stack.Display();
                         break;
-                    case 10:
+                    case 13:
                         stack.Peek();
                         break;
-                    case 11:
+                    case 14:
                         stack.Pop();
                         break;
-                    case 12:
+                    case 15:
                         queue.Enqueue(56);
                         queue.Enqueue(30);
                         queue.Enqueue(70);
                         break;
-                    case 13:
+                    case 16:
                         queue.Display();
                         break;
-                    case 14:
+                    case 17:
                         queue.Dequeue();
                         break;
                     default:
